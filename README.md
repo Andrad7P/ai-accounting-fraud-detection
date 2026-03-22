@@ -1,3 +1,7 @@
+## Live Demo
+
+https://ai-accounting-fraud-detection-pdzgdlctcbkhhheqkvagr2.streamlit.app/
+
 # AI Accounting Fraud Detection
 
 An end-to-end machine learning project that classifies accounting records into four categories using a real-world research dataset from Harvard Dataverse.
