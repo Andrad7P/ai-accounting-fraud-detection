@@ -9,3 +9,4 @@ sentence-transformers
 faiss-cpu
 langchain
 openpyxl
+altair==4.2.2
