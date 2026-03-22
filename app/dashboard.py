@@ -5,7 +5,19 @@ import joblib
 st.set_page_config(page_title="AI Accounting Fraud Detection", layout="wide")
 
 st.title("AI Accounting Fraud Detection Dashboard")
-st.write("Multi-class accounting record classification using machine learning.")
+
+st.markdown(
+"""
+This dashboard classifies accounting records into **four categories** using a trained **Random Forest machine learning model**.
+
+Features:
+- Multi-class fraud classification
+- Prediction confidence scoring
+- Record-level inspection
+- Feature-driven model interpretation
+"""
+)
+st.divider()
 
 # Load data and model
 df = pd.read_excel("data/data.xlsx", engine="openpyxl")
@@ -62,3 +74,16 @@ st.write(
     f"with confidence {selected_row['Confidence']:.2f}. "
     "The model used the 12 accounting-related features to make this classification."
 )
+
+st.divider()
+
+st.subheader("Feature Importance")
+
+st.markdown(
+"""
+The chart below shows which features had the greatest influence on the model's predictions.
+Higher values indicate stronger influence in determining the classification.
+"""
+)
+
+st.image("models/feature_importance.png", caption="Feature Importance - Random Forest Model")
